@@ -6,7 +6,7 @@ output_dir = ''
 # output_dir = '/Users/bruno/Desktop/'
 
 # Load timing 
-file_name = 'scaling_summit_small.log'
+file_name = 'scaling_summit.log'
 data = np.loadtxt( file_name ).T
 n_proc = data[0]
 n_steps = data[5] 
@@ -87,6 +87,7 @@ ax.plot( n_proc_crusher, time_total_crusher,     c=colors[5]     , ls='--'  )
 ax.legend( loc=2, frameon=False, fontsize=11 )
 
 ax.set_xscale('log')
+# ax.set_yscale('log')
 
 ax.set_xlabel('Number of GPUs')
 ax.set_ylabel('Milliseconds per time-step ')
