@@ -6,7 +6,8 @@ output_dir = ''
 # output_dir = '/Users/bruno/Desktop/'
 
 # Load timing 
-file_name = 'scaling_summit.log'
+# file_name = 'scaling_summit.log'
+file_name = 'scaling_summit_new.log'
 data = np.loadtxt( file_name ).T
 n_proc = data[0]
 n_steps = data[5] 
@@ -30,6 +31,7 @@ time_mpi_summit = time_bound + time_pot_bound + time_part_bound + time_part_dens
 time_particles_summit = time_dt + time_part_dens + time_adv_part_1 + time_adv_part_2
 time_chemistry_summit = time_chemistry
 time_total_summit = time_total
+
 
 
 # Load timing 
